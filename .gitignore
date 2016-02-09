@@ -1,0 +1,9 @@
+.DS_Store
+dist/
+data/
+node_modules/
+.idea
+coverage/
+.nyc_output/
+projects/
+parser/*.js
