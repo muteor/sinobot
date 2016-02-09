@@ -1,0 +1,4 @@
+{
+  "port": 9777,
+  "logPath": "/var/log/sinobot"
+}

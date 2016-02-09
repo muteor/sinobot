@@ -1,0 +1,43 @@
+{
+  // The project name
+  "name": "Test Project",
+
+  // Unique ident
+  "id": "test",
+
+  // Command
+  "command": {
+    "type": "ssh",
+    "config": {
+      "commands": [
+        "populate",
+        "run_tests"
+      ],
+      "auth": {}
+    }
+  },
+
+  // Resources
+  "resource": {
+    "type": "pool",
+    "config": {
+      "locking": true,
+      "selector": "random",
+      "pool": [
+        "0.0.0.0",
+        "1.1.1.1"
+      ]
+    }
+  },
+
+  // Notification
+  "notification": {
+    "type": "shell-failure",
+    "config": {}
+  },
+
+  // Artifacts
+  "artifact": {
+    "max": 10
+  }
+}

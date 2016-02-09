@@ -1,0 +1,20 @@
+---- tap ----
+lib/mail
+TAP version 13
+ok 1 - LibMailEmailAddressTest::test_can_create_a_new_email
+ok 2 - LibMailEmailAddressTest::test_creating_email_with_optin
+not ok 3 - Failure: LibMailTest::test_can_get_canonical_address
+  ---
+  message: 'should fail'
+  severity: fail
+  ...
+ok 4 - LibMailTest::test_lib_mail_dnsqr
+1..4
+---- tap ----
+lib/abtester
+TAP version 13
+ok 1 - LibAbtesterTest::test_failed_setup
+ok 2 - LibAbtesterTest::test_misc
+ok 3 - LibAbtesterTest::test_split_force
+ok 4 - LibAbtesterTest::test_splitter
+1..4

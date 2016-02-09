@@ -1,0 +1,51 @@
+{
+  "port": 9777,
+  "slackToken": "89sd7f98s7df98s7df",
+  "logPath": "/var/log/sinobot",
+
+  "projects": [
+    {
+      // The project name
+      "name": "MyProject Build",
+
+      // Unique ident
+      "id": "mp1",
+
+      // Command
+      "command": {
+        "type": "ssh",
+        "config": {
+          "commands": [
+            "populate",
+            "run_tests"
+          ],
+          "auth": {}
+        }
+      },
+
+      // Resources
+      "resources": {
+        "type": "resourcePool",
+        "config": {
+          "locking": true,
+          "selector": "random",
+          "pool": [
+            "0.0.0.0",
+            "1.1.1.1"
+          ]
+        }
+      },
+
+      // Notification
+      "notification": {
+        "type": "shellFailure",
+        "config": {}
+      },
+
+      // Artifacts
+      "artifacts": {
+        "max": 10
+      }
+    }
+  ]
+}
