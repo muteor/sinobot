@@ -4,6 +4,10 @@
   "description": "Simple remote CI build bot",
   "main": "dist/index.js",
   "bin": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:muteor/sinobot.git"
+  }
   "directories": {
     "test": "test"
   },
