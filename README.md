@@ -29,7 +29,7 @@ You can install using docker:
 
 ```bash
 docker build -t muteor/alpine-sinobot .
-docker run -e SINO_CONFIG=/etc/sinobot/config.json -v /sinobot/projects:/etc/sinobot muteor/alpine-sinobot
+docker run -p 9777:9777 -e SINO_CONFIG=/etc/sinobot/config.json -v /sinobot/projects:/etc/sinobot muteor/alpine-sinobot
 ```
 
 Custom parsers are built from the `/etc/sinobot/parsers` directory.
@@ -214,6 +214,12 @@ Get the project status
 Example:
 
 `@sinobot trigger p1`
+
+## Triggering
+
+You can trigger projects via webhook like:
+
+`http://{sinobot_address_or_ip}:{port}/trigger/p1`
 
 ## Extending
 
