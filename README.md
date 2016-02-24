@@ -23,6 +23,21 @@ $ npm run build
 $ npm start -- --config /path/to/config.json # Note the extra -- here
 ```
 
+### Using Docker
+
+You can install using docker:
+
+```bash
+docker build -t muteor/alpine-sinobot .
+docker run -e SINO_CONFIG=/etc/sinobot/config.json -v /sinobot/projects:/etc/sinobot muteor/alpine-sinobot
+```
+
+Custom parsers are built from the `/etc/sinobot/parsers` directory.
+
+You can also install deps for custom modules etc using `SINO_NPM_INSTALL` env variable i.e `npm install "${SINO_NPM_INSTALL}"`.
+
+For debugging you can use the `SINO_VERBOSE` (0-5) env variable to set the logging level.
+
 ## Configuration
 
 Configuration is provided by a `.json` file and the `--config` cli option.

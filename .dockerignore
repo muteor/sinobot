@@ -6,5 +6,5 @@ node_modules/
 coverage/
 .nyc_output/
 projects/
-parser/*.js
-parsers_cache
+.git
+
